@@ -1,0 +1,2 @@
+# Hiya!
+These here are the Python programs I've made that can actually qualify as "programs." Most (if not all as I am typing this..) are just one execution cycles, but eventually I will consolidate them into programs, along with consolidating similar-like programs as separate functions in one consolidated function (i.e. my regex programs).
