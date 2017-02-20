@@ -5,11 +5,11 @@ import pyperclip
 
 '''
 Hey whats up everybody
-SSNs look like: 10 digits long
-000-000-0000
-000.000.0000
-000/000/0000
-0000000000
+SSNs look like: 9 digits long
+000-00-0000
+000.00.0000
+000/00/0000
+123456789
 Which look like telephone numbers...I can use a similar regex for that.
 
 CCs look like: 16 digits long
@@ -19,7 +19,7 @@ CCs look like: 16 digits long
 ssnRE = re.compile(r'''(
     (\d{3}) # first 3 digits
     ([\s\./-]?) # separator
-    (\d{3}) # next 3
+    (\d{2}) # next 3
     ([\s\./-]?) # separator
     (\d{4}) # last 4
     )''', re.VERBOSE)
@@ -31,12 +31,9 @@ for groups in ssnRE.findall(text):
     print(groups)
 
 #TODO: Hide the numbaz
-num1 = re.compile(r'(\d{3})/')
-num1.sub('\1****',text)
-hello = []
-for sup in ssnRE.findall(text):
-    hello.append(sup[0])
-    print(sup)
+num1 = re.compile(r'\d')
+redacted = num1.sub(r'*',text) 
+print(redacted)
 
 if(len(matches)>0):
     pyperclip.copy('\n'.join(matches))
