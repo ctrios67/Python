@@ -2,8 +2,41 @@
 # foliumExample.py
 
 import folium
+import os
+import pandas
 
-newmap = folium.Map(location=[45.372, -121.697], zoom_start=10, tiles='Stamen Terrain')
-folium.Marker(location=[45.3288,-121.6625],popup='Mt. Hood Meadows').add_to(newmap)
-folium.Marker(location=[45.3311,-121.7311],popup='Timberlake Lodge').add_to(newmap)
-newmap.save('testing.html')
+os.chdir('/Users/Christian/Documents/Python/Leaflet_Webmap/')
+print(os.getcwd())
+df = pandas.read_csv('Volcanoes-USA.txt')
+
+newmap = folium.Map(location=[0, 0], zoom_start=4, tiles='Mapbox Bright') #Stamen Terrain tile shows volcanoes better
+
+def color(elev):
+    # For color:
+    # icon=folium.Icon(color='color')
+    minimum = int(min(df['ELEV']))
+    step = int((max(df['ELEV'])-min(df['ELEV']))/3)
+    # maximum = max(df['ELEV'])
+    if elev in range(minimum,minimum+step):
+        col = folium.Icon(color='green')
+    elif elev in range(minimum+step,minimum+step*2):
+        col = folium.Icon(color='orange')
+    else:
+        col = folium.Icon(color='red')
+    return col
+
+fg = folium.FeatureGroup(name='Volcano Locations')
+
+for lat,lon,name,elev in zip(df['LAT'],df['LON'],df['NAME'],df['ELEV']):
+    folium.Marker(location=[lat,lon],popup=name, icon=color(elev)).add_to(fg)
+    #fg.add_child(folium.Marker(location=[lat,lon],popup=name, icon=folium.Icon(color=color(elev),icon_color='green')))
+
+newmap.add_child(fg)
+
+newmap.add_child(folium.GeoJson(data=open('Shapefile/untitled.geojson', encoding='utf-8'),
+                                name='World Population',
+                                style_function = lambda x:{'fillColor':'green' if x['properties']['POP2005']<=10000000 else 'orange' if 10000000<x['properties']['POP2005'] < 20000000 else 'red'}))
+
+newmap.add_child(folium.LayerControl())
+
+newmap.save(outfile='testing.html')
