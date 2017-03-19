@@ -15,9 +15,13 @@ website_list = ['www.facebook.com','facebook.com',
              'www.twitter.com', 'twitter.com',
              'www.reddit.com', 'reddit.com',
              'www.instagram.com', 'instagram.com']
+beginWorkShift = dt(dt.now().year, dt.now().month, dt.now().day, 9)
+endWorkShift = dt(dt.now().year, dt.now().month, dt.now().day, 17)
 
 while True:
-    if(dt(dt.now().year, dt.now().month, dt.now().day, 9) < (dt(dt.now().year, dt.now().month, dt.now().day, 17))):
+    currentTime = dt(dt.now().year, dt.now().month, dt.now().day, dt.now().hour)
+    isWeekday = (currentTime.isoweekday()==6 or currentTime.isoweekday()==7)
+    if( (currentTime > beginWorkShift) and (currentTime < endWorkShift) and (not isWeekday)):
         print('Working Hours...')
         with open(hosts_path,'r+') as file:
             content = file.read()
