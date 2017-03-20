@@ -16,22 +16,39 @@ Update entry
 Delete
 Close
 '''
+# pyinstaller --onefile --windowed frontend.py
+# py2applet --make-setup frontend.py
+# rm -rf build dist
+# python3 setup.py py2app -A
 
 def get_selected_row(event):
     # Global variable needed because in the call to the backend delete function, we can't pass an event.
     global selected_tuple
     # This returns a tuple of the form (#,), without the 0 it returns everything
-    index = list1.curselection()[0]
-    selected_tuple = list1.get(index)
+    try:
+        index = list1.curselection()[0]
+        selected_tuple = list1.get(index)
+        # The following fills the entry windows when an item is selected
+        e1.delete(0,END)
+        e1.insert(END, selected_tuple[1])
+        e2.delete(0,END)
+        e2.insert(END, selected_tuple[2])
+        e3.delete(0,END)
+        e3.insert(END, selected_tuple[3])
+        e4.delete(0,END)
+        e4.insert(END, selected_tuple[4])
+    except IndexError:
+        pass
+    # selected_tuple = list1.get(index)
     # The following fills the entry windows when an item is selected
-    e1.delete(0,END)
-    e1.insert(END, selected_tuple[1])
-    e2.delete(0,END)
-    e2.insert(END, selected_tuple[2])
-    e3.delete(0,END)
-    e3.insert(END, selected_tuple[3])
-    e4.delete(0,END)
-    e4.insert(END, selected_tuple[4])
+    #e1.delete(0,END)
+    #e1.insert(END, selected_tuple[1])
+    #e2.delete(0,END)
+    #e2.insert(END, selected_tuple[2])
+    #e3.delete(0,END)
+    #e3.insert(END, selected_tuple[3])
+    #e4.delete(0,END)
+    #e4.insert(END, selected_tuple[4])
 
 def view_command():
     # From index 0 of Listbox to end
