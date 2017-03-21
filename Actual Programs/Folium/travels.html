@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster-src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_f4fca5b6ad6e431394d6e3e04467b630 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f4fca5b6ad6e431394d6e3e04467b630" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var southWest = L.latLng(-90, -180);
+                var northEast = L.latLng(90, 180);
+                var bounds = L.latLngBounds(southWest, northEast);
+            
+
+            var map_f4fca5b6ad6e431394d6e3e04467b630 = L.map(
+                                  'map_f4fca5b6ad6e431394d6e3e04467b630',
+                                  {center: [37.68665,-98.096398],
+                                  zoom: 4,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_384a1cdaf64e4794ad5a8a20c5486998 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    continuousWorld: false,
+                    noWrap: false,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+
+        
+    
+
+            var marker_ad7614a5c411457fa5622469af9144c6 = L.marker(
+                [40.604942,-73.998427],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_1bdd60fe55624ae3a8843054bf8f4635 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1058c8080>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ad7614a5c411457fa5622469af9144c6.setIcon(icon_1bdd60fe55624ae3a8843054bf8f4635);
+            
+    
+            var popup_5c73f1b121594712bde9f7f5ec56c785 = L.popup({maxWidth: '300'});
+
+            
+                var html_7bbb6eb094e342eb88627c83092d3786 = $('<div id="html_7bbb6eb094e342eb88627c83092d3786" style="width: 100.0%; height: 100.0%;">Brooklyn, NY, USA</div>')[0];
+                popup_5c73f1b121594712bde9f7f5ec56c785.setContent(html_7bbb6eb094e342eb88627c83092d3786);
+            
+
+            marker_ad7614a5c411457fa5622469af9144c6.bindPopup(popup_5c73f1b121594712bde9f7f5ec56c785);
+
+            
+        
+    
+
+            var marker_e3e5fffb9cd545fbb28600227f83f387 = L.marker(
+                [40.756016,-73.987033],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_6873920475dc43978ff1a7635f2aaaed = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10587eb70>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e3e5fffb9cd545fbb28600227f83f387.setIcon(icon_6873920475dc43978ff1a7635f2aaaed);
+            
+    
+            var popup_38071ec6e4f4444a82d33fdd7535ddf4 = L.popup({maxWidth: '300'});
+
+            
+                var html_eec57eff368f408bab18b08c9554211b = $('<div id="html_eec57eff368f408bab18b08c9554211b" style="width: 100.0%; height: 100.0%;">Manhattan, NY, USA</div>')[0];
+                popup_38071ec6e4f4444a82d33fdd7535ddf4.setContent(html_eec57eff368f408bab18b08c9554211b);
+            
+
+            marker_e3e5fffb9cd545fbb28600227f83f387.bindPopup(popup_38071ec6e4f4444a82d33fdd7535ddf4);
+
+            
+        
+    
+
+            var marker_42bcadb652574fff8a82386a02202f50 = L.marker(
+                [40.749915,-73.862682],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_f53068096ae7488bb4abc96e0a147b5f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105869908>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_42bcadb652574fff8a82386a02202f50.setIcon(icon_f53068096ae7488bb4abc96e0a147b5f);
+            
+    
+            var popup_41e2cd9ff2ec4ab598f53eb0ff6aba6d = L.popup({maxWidth: '300'});
+
+            
+                var html_f7b8d9e6ded746868d6458062ed4efb0 = $('<div id="html_f7b8d9e6ded746868d6458062ed4efb0" style="width: 100.0%; height: 100.0%;">Queens, NY, USA</div>')[0];
+                popup_41e2cd9ff2ec4ab598f53eb0ff6aba6d.setContent(html_f7b8d9e6ded746868d6458062ed4efb0);
+            
+
+            marker_42bcadb652574fff8a82386a02202f50.bindPopup(popup_41e2cd9ff2ec4ab598f53eb0ff6aba6d);
+
+            
+        
+    
+
+            var marker_0e8ef2b47af54062965a1221dd9c09bb = L.marker(
+                [40.786693,-73.72653],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_1e4f819c9fda4a3a9dd4cc7afc04c070 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586b0b8>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0e8ef2b47af54062965a1221dd9c09bb.setIcon(icon_1e4f819c9fda4a3a9dd4cc7afc04c070);
+            
+    
+            var popup_97856340282a445c83664296e30e98b3 = L.popup({maxWidth: '300'});
+
+            
+                var html_5597251413084581853ff767ff026a89 = $('<div id="html_5597251413084581853ff767ff026a89" style="width: 100.0%; height: 100.0%;">Long Island, NY, USA</div>')[0];
+                popup_97856340282a445c83664296e30e98b3.setContent(html_5597251413084581853ff767ff026a89);
+            
+
+            marker_0e8ef2b47af54062965a1221dd9c09bb.bindPopup(popup_97856340282a445c83664296e30e98b3);
+
+            
+        
+    
+
+            var marker_31311b7c5ea445ed8fab0962e3f79ea8 = L.marker(
+                [43.047971,-76.154141],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_83a21dc42bd1460eb555f39fcd50cc1c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586b6a0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_31311b7c5ea445ed8fab0962e3f79ea8.setIcon(icon_83a21dc42bd1460eb555f39fcd50cc1c);
+            
+    
+            var popup_dceaf267582e48fdb765684e653cf0cb = L.popup({maxWidth: '300'});
+
+            
+                var html_6d4ea62d466448dd8b52bf62b70da357 = $('<div id="html_6d4ea62d466448dd8b52bf62b70da357" style="width: 100.0%; height: 100.0%;">Syracuse, NY, USA</div>')[0];
+                popup_dceaf267582e48fdb765684e653cf0cb.setContent(html_6d4ea62d466448dd8b52bf62b70da357);
+            
+
+            marker_31311b7c5ea445ed8fab0962e3f79ea8.bindPopup(popup_dceaf267582e48fdb765684e653cf0cb);
+
+            
+        
+    
+
+            var marker_8c94b6035da244a3846135a17dd7d904 = L.marker(
+                [42.100547,-75.912043],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_6e7454cc0ae441eaad825b186bd976ef = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1058c3978>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8c94b6035da244a3846135a17dd7d904.setIcon(icon_6e7454cc0ae441eaad825b186bd976ef);
+            
+    
+            var popup_b5a34b3f34f04e728427759d47f6ffa2 = L.popup({maxWidth: '300'});
+
+            
+                var html_7a4bf0dd2d4946d2bb23b7920f337b4a = $('<div id="html_7a4bf0dd2d4946d2bb23b7920f337b4a" style="width: 100.0%; height: 100.0%;">Binghamton, NY, USA</div>')[0];
+                popup_b5a34b3f34f04e728427759d47f6ffa2.setContent(html_7a4bf0dd2d4946d2bb23b7920f337b4a);
+            
+
+            marker_8c94b6035da244a3846135a17dd7d904.bindPopup(popup_b5a34b3f34f04e728427759d47f6ffa2);
+
+            
+        
+    
+
+            var marker_38a7ade1345a4bea8a5569e66c82f774 = L.marker(
+                [43.0838,-79.077192],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_2c723b55d2264a3db118d64515de0c38 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586f438>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_38a7ade1345a4bea8a5569e66c82f774.setIcon(icon_2c723b55d2264a3db118d64515de0c38);
+            
+    
+            var popup_ca715a7b06d140fda3c0d9cae54685c6 = L.popup({maxWidth: '300'});
+
+            
+                var html_32771c0b13e04022b90a747a5ac4f32e = $('<div id="html_32771c0b13e04022b90a747a5ac4f32e" style="width: 100.0%; height: 100.0%;">Niagara Falls, ON, CAN</div>')[0];
+                popup_ca715a7b06d140fda3c0d9cae54685c6.setContent(html_32771c0b13e04022b90a747a5ac4f32e);
+            
+
+            marker_38a7ade1345a4bea8a5569e66c82f774.bindPopup(popup_ca715a7b06d140fda3c0d9cae54685c6);
+
+            
+        
+    
+
+            var marker_acc1bc512114488e963fdda7871baf08 = L.marker(
+                [43.645756,-79.393553],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_a86c8f0bb22348059d6e99dd28766980 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1058696a0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_acc1bc512114488e963fdda7871baf08.setIcon(icon_a86c8f0bb22348059d6e99dd28766980);
+            
+    
+            var popup_dc08e15329b04f578793353e9d6f9a4c = L.popup({maxWidth: '300'});
+
+            
+                var html_62e0a42909ae41d0a83850b4d8e778b4 = $('<div id="html_62e0a42909ae41d0a83850b4d8e778b4" style="width: 100.0%; height: 100.0%;">Toronto, ON, CAN</div>')[0];
+                popup_dc08e15329b04f578793353e9d6f9a4c.setContent(html_62e0a42909ae41d0a83850b4d8e778b4);
+            
+
+            marker_acc1bc512114488e963fdda7871baf08.bindPopup(popup_dc08e15329b04f578793353e9d6f9a4c);
+
+            
+        
+    
+
+            var marker_ef2a2c69954549fe8aa254c435723f58 = L.marker(
+                [41.887974,-87.637326],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_92986f0906d94b479240d589223028a4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586b668>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ef2a2c69954549fe8aa254c435723f58.setIcon(icon_92986f0906d94b479240d589223028a4);
+            
+    
+            var popup_2aba139706314e15a4a2e9075ef1fd99 = L.popup({maxWidth: '300'});
+
+            
+                var html_e41dc7cbad3b4287a8647d977a0ea37b = $('<div id="html_e41dc7cbad3b4287a8647d977a0ea37b" style="width: 100.0%; height: 100.0%;">Chicago, IL, USA</div>')[0];
+                popup_2aba139706314e15a4a2e9075ef1fd99.setContent(html_e41dc7cbad3b4287a8647d977a0ea37b);
+            
+
+            marker_ef2a2c69954549fe8aa254c435723f58.bindPopup(popup_2aba139706314e15a4a2e9075ef1fd99);
+
+            
+        
+    
+
+            var marker_9230f8e8af4f48d0b841460997ff595a = L.marker(
+                [39.972842,-83.004587],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_ca8331dc6bdf40a0b2e677330f817f2f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105872c18>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9230f8e8af4f48d0b841460997ff595a.setIcon(icon_ca8331dc6bdf40a0b2e677330f817f2f);
+            
+    
+            var popup_9d4a1d053355485fa084cb0bb0bb94ea = L.popup({maxWidth: '300'});
+
+            
+                var html_0d71e3b7293846b686413357ecc703b6 = $('<div id="html_0d71e3b7293846b686413357ecc703b6" style="width: 100.0%; height: 100.0%;">Columbus, OH, USA</div>')[0];
+                popup_9d4a1d053355485fa084cb0bb0bb94ea.setContent(html_0d71e3b7293846b686413357ecc703b6);
+            
+
+            marker_9230f8e8af4f48d0b841460997ff595a.bindPopup(popup_9d4a1d053355485fa084cb0bb0bb94ea);
+
+            
+        
+    
+
+            var marker_9aea2e90d4044d4caa5c416f5d734903 = L.marker(
+                [39.108584,-84.512817],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_c4932950d54b4e02955a934dc79016b5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105877b38>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9aea2e90d4044d4caa5c416f5d734903.setIcon(icon_c4932950d54b4e02955a934dc79016b5);
+            
+    
+            var popup_1e931ffa01234bd4b676524be5b3d6a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_58c586e82e26478db14f54facc826e39 = $('<div id="html_58c586e82e26478db14f54facc826e39" style="width: 100.0%; height: 100.0%;">Cincinnati, OH, USA</div>')[0];
+                popup_1e931ffa01234bd4b676524be5b3d6a4.setContent(html_58c586e82e26478db14f54facc826e39);
+            
+
+            marker_9aea2e90d4044d4caa5c416f5d734903.bindPopup(popup_1e931ffa01234bd4b676524be5b3d6a4);
+
+            
+        
+    
+
+            var marker_18751529c88f419a876a5e1e9dd4921f = L.marker(
+                [39.094258,-84.495829],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_56b7d83f8df04fa7b78102b55f183718 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586f4e0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_18751529c88f419a876a5e1e9dd4921f.setIcon(icon_56b7d83f8df04fa7b78102b55f183718);
+            
+    
+            var popup_388e59c9c8e049a4994872e16f54267f = L.popup({maxWidth: '300'});
+
+            
+                var html_20ab748a35aa4d6db11cbacbb8c75c39 = $('<div id="html_20ab748a35aa4d6db11cbacbb8c75c39" style="width: 100.0%; height: 100.0%;">Newport, KY, USA</div>')[0];
+                popup_388e59c9c8e049a4994872e16f54267f.setContent(html_20ab748a35aa4d6db11cbacbb8c75c39);
+            
+
+            marker_18751529c88f419a876a5e1e9dd4921f.bindPopup(popup_388e59c9c8e049a4994872e16f54267f);
+
+            
+        
+    
+
+            var marker_60f75e2cb3054396a0df3862f6a6c62f = L.marker(
+                [39.088127,-84.508237],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_6f0693d1e03243498b247b35baf6e187 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105878a90>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_60f75e2cb3054396a0df3862f6a6c62f.setIcon(icon_6f0693d1e03243498b247b35baf6e187);
+            
+    
+            var popup_4f045f0041e845e4a470aaf040c26629 = L.popup({maxWidth: '300'});
+
+            
+                var html_05bac877a0ba48329e26ffa790f5123d = $('<div id="html_05bac877a0ba48329e26ffa790f5123d" style="width: 100.0%; height: 100.0%;">Covington, KY, USA</div>')[0];
+                popup_4f045f0041e845e4a470aaf040c26629.setContent(html_05bac877a0ba48329e26ffa790f5123d);
+            
+
+            marker_60f75e2cb3054396a0df3862f6a6c62f.bindPopup(popup_4f045f0041e845e4a470aaf040c26629);
+
+            
+        
+    
+
+            var marker_a2120c335c674575a8fb8794cd8205d5 = L.marker(
+                [38.89739,-77.031985],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_e33b7942ffe14fbab3183ea7e5e5fb32 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10587bba8>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a2120c335c674575a8fb8794cd8205d5.setIcon(icon_e33b7942ffe14fbab3183ea7e5e5fb32);
+            
+    
+            var popup_adc0d275dcc94d58bb7a2ad486f7552a = L.popup({maxWidth: '300'});
+
+            
+                var html_d95e0dff29044c4ba2028825c8678432 = $('<div id="html_d95e0dff29044c4ba2028825c8678432" style="width: 100.0%; height: 100.0%;">Washington, D.C., USA</div>')[0];
+                popup_adc0d275dcc94d58bb7a2ad486f7552a.setContent(html_d95e0dff29044c4ba2028825c8678432);
+            
+
+            marker_a2120c335c674575a8fb8794cd8205d5.bindPopup(popup_adc0d275dcc94d58bb7a2ad486f7552a);
+
+            
+        
+    
+
+            var marker_2dd9a2e671ce41acb643ea533f08efad = L.marker(
+                [42.105815,-72.593122],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_4d58e89f0a4d4b76802a95c674ad8285 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105878278>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2dd9a2e671ce41acb643ea533f08efad.setIcon(icon_4d58e89f0a4d4b76802a95c674ad8285);
+            
+    
+            var popup_eeb34219a1bd4469abaf1e3eac886394 = L.popup({maxWidth: '300'});
+
+            
+                var html_0e4030eaed3549a38b62df311e8ac9c5 = $('<div id="html_0e4030eaed3549a38b62df311e8ac9c5" style="width: 100.0%; height: 100.0%;">Springfield, MA, USA</div>')[0];
+                popup_eeb34219a1bd4469abaf1e3eac886394.setContent(html_0e4030eaed3549a38b62df311e8ac9c5);
+            
+
+            marker_2dd9a2e671ce41acb643ea533f08efad.bindPopup(popup_eeb34219a1bd4469abaf1e3eac886394);
+
+            
+        
+    
+
+            var marker_d6317a8074704913a6338e6e2b7491a1 = L.marker(
+                [40.64545,-74.209772],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_10aae6ec1a684375b08fab10e5aeed2e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105877ac8>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d6317a8074704913a6338e6e2b7491a1.setIcon(icon_10aae6ec1a684375b08fab10e5aeed2e);
+            
+    
+            var popup_85c32ce768a245caa71a109925ef4a51 = L.popup({maxWidth: '300'});
+
+            
+                var html_2cda99f332c54282a306a7eb8e1e60a5 = $('<div id="html_2cda99f332c54282a306a7eb8e1e60a5" style="width: 100.0%; height: 100.0%;">Elizabeth, NJ, USA</div>')[0];
+                popup_85c32ce768a245caa71a109925ef4a51.setContent(html_2cda99f332c54282a306a7eb8e1e60a5);
+            
+
+            marker_d6317a8074704913a6338e6e2b7491a1.bindPopup(popup_85c32ce768a245caa71a109925ef4a51);
+
+            
+        
+    
+
+            var marker_3e2ac1cc597d46e89d40c79965fbd19e = L.marker(
+                [40.86368,-74.561124],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_cac3ea4659b34146af11382ff0e37c2b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1058c3e48>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3e2ac1cc597d46e89d40c79965fbd19e.setIcon(icon_cac3ea4659b34146af11382ff0e37c2b);
+            
+    
+            var popup_42c43a2005d3437fbcf856f6bbe82282 = L.popup({maxWidth: '300'});
+
+            
+                var html_aa6ab09c63814b71aa20192950255ee3 = $('<div id="html_aa6ab09c63814b71aa20192950255ee3" style="width: 100.0%; height: 100.0%;">Randolph, NJ, USA</div>')[0];
+                popup_42c43a2005d3437fbcf856f6bbe82282.setContent(html_aa6ab09c63814b71aa20192950255ee3);
+            
+
+            marker_3e2ac1cc597d46e89d40c79965fbd19e.bindPopup(popup_42c43a2005d3437fbcf856f6bbe82282);
+
+            
+        
+    
+
+            var marker_9273057d750c40cea6346f3bfea7b9b1 = L.marker(
+                [40.932831,-74.150338],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_6a18cc7666d749578a5cd4a2ec1f1969 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10587bef0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9273057d750c40cea6346f3bfea7b9b1.setIcon(icon_6a18cc7666d749578a5cd4a2ec1f1969);
+            
+    
+            var popup_9a9f5e441466476ba58c26139e1d1542 = L.popup({maxWidth: '300'});
+
+            
+                var html_a7043af848b745b59cfe3915886ca313 = $('<div id="html_a7043af848b745b59cfe3915886ca313" style="width: 100.0%; height: 100.0%;">Paterson, NJ, USA</div>')[0];
+                popup_9a9f5e441466476ba58c26139e1d1542.setContent(html_a7043af848b745b59cfe3915886ca313);
+            
+
+            marker_9273057d750c40cea6346f3bfea7b9b1.bindPopup(popup_9a9f5e441466476ba58c26139e1d1542);
+
+            
+        
+    
+
+            var marker_eba42b005cb640a59499c6fd3b2730a1 = L.marker(
+                [40.940198,-74.120238],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_41125edbdba84315910862526432e450 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1058c8d68>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_eba42b005cb640a59499c6fd3b2730a1.setIcon(icon_41125edbdba84315910862526432e450);
+            
+    
+            var popup_d7f33f14281a46378f91bbf360217c58 = L.popup({maxWidth: '300'});
+
+            
+                var html_95b0fce640364336bcbd316453c7dbfd = $('<div id="html_95b0fce640364336bcbd316453c7dbfd" style="width: 100.0%; height: 100.0%;">Fair Lawn, NJ, USA</div>')[0];
+                popup_d7f33f14281a46378f91bbf360217c58.setContent(html_95b0fce640364336bcbd316453c7dbfd);
+            
+
+            marker_eba42b005cb640a59499c6fd3b2730a1.bindPopup(popup_d7f33f14281a46378f91bbf360217c58);
+
+            
+        
+    
+
+            var marker_168469e11d5544499e3b28593ad0d341 = L.marker(
+                [40.220461,-73.999791],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_a2f97d3d245a40e594fa1bf5dc98dcf8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105995f60>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_168469e11d5544499e3b28593ad0d341.setIcon(icon_a2f97d3d245a40e594fa1bf5dc98dcf8);
+            
+    
+            var popup_f7e9b78fec9641368bb5b677859f2d5e = L.popup({maxWidth: '300'});
+
+            
+                var html_aa8f8e7ea975406b9d9e2b645d277208 = $('<div id="html_aa8f8e7ea975406b9d9e2b645d277208" style="width: 100.0%; height: 100.0%;">Asbury Park, NJ, USA</div>')[0];
+                popup_f7e9b78fec9641368bb5b677859f2d5e.setContent(html_aa8f8e7ea975406b9d9e2b645d277208);
+            
+
+            marker_168469e11d5544499e3b28593ad0d341.bindPopup(popup_f7e9b78fec9641368bb5b677859f2d5e);
+
+            
+        
+    
+
+            var marker_a4f8668baa394f61b5d33bd5d3addf7a = L.marker(
+                [39.940986,-75.129927],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_06a01b10dfd44fcfad7fd14d11c41213 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586fe10>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a4f8668baa394f61b5d33bd5d3addf7a.setIcon(icon_06a01b10dfd44fcfad7fd14d11c41213);
+            
+    
+            var popup_afc7ea030c97489399ce743815765562 = L.popup({maxWidth: '300'});
+
+            
+                var html_e5995b2ccbbe4c729aa55efbc523c70a = $('<div id="html_e5995b2ccbbe4c729aa55efbc523c70a" style="width: 100.0%; height: 100.0%;">Camden, NJ, USA</div>')[0];
+                popup_afc7ea030c97489399ce743815765562.setContent(html_e5995b2ccbbe4c729aa55efbc523c70a);
+            
+
+            marker_a4f8668baa394f61b5d33bd5d3addf7a.bindPopup(popup_afc7ea030c97489399ce743815765562);
+
+            
+        
+    
+
+            var marker_5c9a9384d6614b56b2feb7c58e3ab804 = L.marker(
+                [40.554912,-74.277131],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_3f7ddb89cfe244e0a99e11a88898e17d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105988d30>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5c9a9384d6614b56b2feb7c58e3ab804.setIcon(icon_3f7ddb89cfe244e0a99e11a88898e17d);
+            
+    
+            var popup_e0e1c64e4e8243ddbfb2ea99584e2664 = L.popup({maxWidth: '300'});
+
+            
+                var html_c74387763b3f476bb498e5652524f2ac = $('<div id="html_c74387763b3f476bb498e5652524f2ac" style="width: 100.0%; height: 100.0%;">Woodbridge, NJ, USA</div>')[0];
+                popup_e0e1c64e4e8243ddbfb2ea99584e2664.setContent(html_c74387763b3f476bb498e5652524f2ac);
+            
+
+            marker_5c9a9384d6614b56b2feb7c58e3ab804.bindPopup(popup_e0e1c64e4e8243ddbfb2ea99584e2664);
+
+            
+        
+    
+
+            var marker_e1210d8c70354829a4163b14fdf4584b = L.marker(
+                [40.742756,-74.178422],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_f0df1eb9b43d4c86b5bf9a1502d29ebd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059c1400>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e1210d8c70354829a4163b14fdf4584b.setIcon(icon_f0df1eb9b43d4c86b5bf9a1502d29ebd);
+            
+    
+            var popup_7ce26d67ce914ad8a8b752c2733967e3 = L.popup({maxWidth: '300'});
+
+            
+                var html_c1fe106a9a9347299cd9d5b45df022a2 = $('<div id="html_c1fe106a9a9347299cd9d5b45df022a2" style="width: 100.0%; height: 100.0%;">Newark, NJ, USA</div>')[0];
+                popup_7ce26d67ce914ad8a8b752c2733967e3.setContent(html_c1fe106a9a9347299cd9d5b45df022a2);
+            
+
+            marker_e1210d8c70354829a4163b14fdf4584b.bindPopup(popup_7ce26d67ce914ad8a8b752c2733967e3);
+
+            
+        
+    
+
+            var marker_bd889769e27e42feb62fbf968d9ac5b4 = L.marker(
+                [39.353044,-74.44574],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_0fca96bc185243c9863f3c823ac2377e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10586f208>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bd889769e27e42feb62fbf968d9ac5b4.setIcon(icon_0fca96bc185243c9863f3c823ac2377e);
+            
+    
+            var popup_ef34ee93a7d94d44b9697a32a3ce3f1f = L.popup({maxWidth: '300'});
+
+            
+                var html_abe277c8fd0149af93c9a0fb06569338 = $('<div id="html_abe277c8fd0149af93c9a0fb06569338" style="width: 100.0%; height: 100.0%;">Atlantic City, NJ, USA</div>')[0];
+                popup_ef34ee93a7d94d44b9697a32a3ce3f1f.setContent(html_abe277c8fd0149af93c9a0fb06569338);
+            
+
+            marker_bd889769e27e42feb62fbf968d9ac5b4.bindPopup(popup_ef34ee93a7d94d44b9697a32a3ce3f1f);
+
+            
+        
+    
+
+            var marker_e083c98ac1d8481f8f170459bee7ef77 = L.marker(
+                [39.663754,-75.628993],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_b5cc2f0729ed44f8a84b5b2e57645ca1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059c1c50>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e083c98ac1d8481f8f170459bee7ef77.setIcon(icon_b5cc2f0729ed44f8a84b5b2e57645ca1);
+            
+    
+            var popup_3ecde39854fa43db849953bd465798ca = L.popup({maxWidth: '300'});
+
+            
+                var html_8a7ff3c8041048c7886e3d44437a179f = $('<div id="html_8a7ff3c8041048c7886e3d44437a179f" style="width: 100.0%; height: 100.0%;">New Castle, DE, USA</div>')[0];
+                popup_3ecde39854fa43db849953bd465798ca.setContent(html_8a7ff3c8041048c7886e3d44437a179f);
+            
+
+            marker_e083c98ac1d8481f8f170459bee7ef77.bindPopup(popup_3ecde39854fa43db849953bd465798ca);
+
+            
+        
+    
+
+            var marker_561b1272a9464fbbb105809d5f36e53b = L.marker(
+                [38.374371,-75.071684],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_b34f7a3a52f04874b53ddd4305fd021e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059cb278>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_561b1272a9464fbbb105809d5f36e53b.setIcon(icon_b34f7a3a52f04874b53ddd4305fd021e);
+            
+    
+            var popup_e018c27afdc64508a8a104e26b02233a = L.popup({maxWidth: '300'});
+
+            
+                var html_357f99d25c35441b9c0dbf01c9045690 = $('<div id="html_357f99d25c35441b9c0dbf01c9045690" style="width: 100.0%; height: 100.0%;">Ocean City, MD, USA</div>')[0];
+                popup_e018c27afdc64508a8a104e26b02233a.setContent(html_357f99d25c35441b9c0dbf01c9045690);
+            
+
+            marker_561b1272a9464fbbb105809d5f36e53b.bindPopup(popup_e018c27afdc64508a8a104e26b02233a);
+
+            
+        
+    
+
+            var marker_a0d4810e05434b318060355c1b69bb55 = L.marker(
+                [40.107438,-79.378143],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_0a585cbd57ec44df9fd3a67b1f61b445 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x10599bd68>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a0d4810e05434b318060355c1b69bb55.setIcon(icon_0a585cbd57ec44df9fd3a67b1f61b445);
+            
+    
+            var popup_ddc864a863d94914bf3a11dc77d26c0d = L.popup({maxWidth: '300'});
+
+            
+                var html_61ae993fbc124b948b983b95821c36b7 = $('<div id="html_61ae993fbc124b948b983b95821c36b7" style="width: 100.0%; height: 100.0%;">Donegal, PA, USA</div>')[0];
+                popup_ddc864a863d94914bf3a11dc77d26c0d.setContent(html_61ae993fbc124b948b983b95821c36b7);
+            
+
+            marker_a0d4810e05434b318060355c1b69bb55.bindPopup(popup_ddc864a863d94914bf3a11dc77d26c0d);
+
+            
+        
+    
+
+            var marker_349f72f7f88e4dedb0401438b0aa908c = L.marker(
+                [41.211457,-74.873959],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_42cfc6603d8e4d4d81c511e321ef5182 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059cbe48>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_349f72f7f88e4dedb0401438b0aa908c.setIcon(icon_42cfc6603d8e4d4d81c511e321ef5182);
+            
+    
+            var popup_c2693bedc88d446e9059f1893510a9ca = L.popup({maxWidth: '300'});
+
+            
+                var html_1ad23c78c83345f790710c27452486c5 = $('<div id="html_1ad23c78c83345f790710c27452486c5" style="width: 100.0%; height: 100.0%;">Dingmans Ferry, PA, USA</div>')[0];
+                popup_c2693bedc88d446e9059f1893510a9ca.setContent(html_1ad23c78c83345f790710c27452486c5);
+            
+
+            marker_349f72f7f88e4dedb0401438b0aa908c.bindPopup(popup_c2693bedc88d446e9059f1893510a9ca);
+
+            
+        
+    
+
+            var marker_7192e673090c449b93b41bf297dabdfd = L.marker(
+                [39.949333,-75.150114],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_058b68b288564188afc539dfd939f82c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059cc2b0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7192e673090c449b93b41bf297dabdfd.setIcon(icon_058b68b288564188afc539dfd939f82c);
+            
+    
+            var popup_bfee76e8c5c645b5af9271d4019fba27 = L.popup({maxWidth: '300'});
+
+            
+                var html_e41e2fdc8aaa4e948ef9a4911ce594c4 = $('<div id="html_e41e2fdc8aaa4e948ef9a4911ce594c4" style="width: 100.0%; height: 100.0%;">Philadelphia, PA, USA</div>')[0];
+                popup_bfee76e8c5c645b5af9271d4019fba27.setContent(html_e41e2fdc8aaa4e948ef9a4911ce594c4);
+            
+
+            marker_7192e673090c449b93b41bf297dabdfd.bindPopup(popup_bfee76e8c5c645b5af9271d4019fba27);
+
+            
+        
+    
+
+            var marker_c3acca8d67da4e389936a5df0e2f1317 = L.marker(
+                [30.327054,-81.661681],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_f05ba7bc6c3e4634b40728babb965b74 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059c15c0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c3acca8d67da4e389936a5df0e2f1317.setIcon(icon_f05ba7bc6c3e4634b40728babb965b74);
+            
+    
+            var popup_d0d10ae347b64182898a12b3684beb38 = L.popup({maxWidth: '300'});
+
+            
+                var html_36ab93e9add64471b7f62120c603dbcd = $('<div id="html_36ab93e9add64471b7f62120c603dbcd" style="width: 100.0%; height: 100.0%;">Jacksonville, FL, USA</div>')[0];
+                popup_d0d10ae347b64182898a12b3684beb38.setContent(html_36ab93e9add64471b7f62120c603dbcd);
+            
+
+            marker_c3acca8d67da4e389936a5df0e2f1317.bindPopup(popup_d0d10ae347b64182898a12b3684beb38);
+
+            
+        
+    
+
+            var marker_b3e8d0bc11b4487f9792c4f3a4966833 = L.marker(
+                [29.897154,-81.311535],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_4c20d4de4ca5427bb60a55de949b5253 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059cbcc0>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b3e8d0bc11b4487f9792c4f3a4966833.setIcon(icon_4c20d4de4ca5427bb60a55de949b5253);
+            
+    
+            var popup_1a6effa4eea24d63879be6de45ddd5f4 = L.popup({maxWidth: '300'});
+
+            
+                var html_e8d941549c4a413bafc2f612b22595e2 = $('<div id="html_e8d941549c4a413bafc2f612b22595e2" style="width: 100.0%; height: 100.0%;">St. Augustine, FL, USA</div>')[0];
+                popup_1a6effa4eea24d63879be6de45ddd5f4.setContent(html_e8d941549c4a413bafc2f612b22595e2);
+            
+
+            marker_b3e8d0bc11b4487f9792c4f3a4966833.bindPopup(popup_1a6effa4eea24d63879be6de45ddd5f4);
+
+            
+        
+    
+
+            var marker_6054c1ea336e4b8eac9c0bc0b869a7e0 = L.marker(
+                [29.557746,-81.208904],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_76d82aa00cdc4275a0acca0989fc2f45 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059ed358>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6054c1ea336e4b8eac9c0bc0b869a7e0.setIcon(icon_76d82aa00cdc4275a0acca0989fc2f45);
+            
+    
+            var popup_7b905535fa99428db22435818a403364 = L.popup({maxWidth: '300'});
+
+            
+                var html_625e6e7a485b4311b302b3b9b126692b = $('<div id="html_625e6e7a485b4311b302b3b9b126692b" style="width: 100.0%; height: 100.0%;">Palm Coast, FL, USA</div>')[0];
+                popup_7b905535fa99428db22435818a403364.setContent(html_625e6e7a485b4311b302b3b9b126692b);
+            
+
+            marker_6054c1ea336e4b8eac9c0bc0b869a7e0.bindPopup(popup_7b905535fa99428db22435818a403364);
+
+            
+        
+    
+
+            var marker_28b4cdc3256f4b39af3f5e550e2609e0 = L.marker(
+                [28.45038,-81.489313],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_55e532b4d37547928989ab741852aa1e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105a01860>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_28b4cdc3256f4b39af3f5e550e2609e0.setIcon(icon_55e532b4d37547928989ab741852aa1e);
+            
+    
+            var popup_d1b16ee2c9874045abcca4f5916c3149 = L.popup({maxWidth: '300'});
+
+            
+                var html_f5c735872a694cbdbfdbd8a7a33a2475 = $('<div id="html_f5c735872a694cbdbfdbd8a7a33a2475" style="width: 100.0%; height: 100.0%;">Doctor Phillips, FL, USA</div>')[0];
+                popup_d1b16ee2c9874045abcca4f5916c3149.setContent(html_f5c735872a694cbdbfdbd8a7a33a2475);
+            
+
+            marker_28b4cdc3256f4b39af3f5e550e2609e0.bindPopup(popup_d1b16ee2c9874045abcca4f5916c3149);
+
+            
+        
+    
+
+            var marker_a8f5940be6bc46a38614ba8c799aa546 = L.marker(
+                [32.747865,-117.25022],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_88ca56e2e4c24b7fa463ea84dbf29396 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059953c8>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a8f5940be6bc46a38614ba8c799aa546.setIcon(icon_88ca56e2e4c24b7fa463ea84dbf29396);
+            
+    
+            var popup_bbfae89a2fec406abfc6af80df89f6df = L.popup({maxWidth: '300'});
+
+            
+                var html_4c2e1f3ae1ca49ec9f966ea320265a0b = $('<div id="html_4c2e1f3ae1ca49ec9f966ea320265a0b" style="width: 100.0%; height: 100.0%;">San Diego, CA, USA</div>')[0];
+                popup_bbfae89a2fec406abfc6af80df89f6df.setContent(html_4c2e1f3ae1ca49ec9f966ea320265a0b);
+            
+
+            marker_a8f5940be6bc46a38614ba8c799aa546.bindPopup(popup_bbfae89a2fec406abfc6af80df89f6df);
+
+            
+        
+    
+
+            var marker_1b7ba52b17ba421dba7bf016ed69de17 = L.marker(
+                [18.667454,-68.398002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_cf12b419ab554d3b8b51c64d2339b1b1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x1059c8518>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1b7ba52b17ba421dba7bf016ed69de17.setIcon(icon_cf12b419ab554d3b8b51c64d2339b1b1);
+            
+    
+            var popup_20c88d56d0de4728853dc44eb682e3fb = L.popup({maxWidth: '300'});
+
+            
+                var html_b6e0a05a3d5c445eb9189b6d27b479b2 = $('<div id="html_b6e0a05a3d5c445eb9189b6d27b479b2" style="width: 100.0%; height: 100.0%;">Punta Cana, DR, Dominican Republic</div>')[0];
+                popup_20c88d56d0de4728853dc44eb682e3fb.setContent(html_b6e0a05a3d5c445eb9189b6d27b479b2);
+            
+
+            marker_1b7ba52b17ba421dba7bf016ed69de17.bindPopup(popup_20c88d56d0de4728853dc44eb682e3fb);
+
+            
+        
+    
+
+            var marker_d642feb833a84581a2183edf8e9cc426 = L.marker(
+                [18.141111,-66.26262],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_f4fca5b6ad6e431394d6e3e04467b630);
+            
+    
+
+                var icon_5d5ca76a8dcd41528c55c5a63e4be9ab = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: '<folium.map.Icon object at 0x105a086d8>',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d642feb833a84581a2183edf8e9cc426.setIcon(icon_5d5ca76a8dcd41528c55c5a63e4be9ab);
+            
+    
+            var popup_e81cc9ffe37241fb85b460305de5acf4 = L.popup({maxWidth: '300'});
+
+            
+                var html_b095ceaf7b094034bb9580fdd8a500dc = $('<div id="html_b095ceaf7b094034bb9580fdd8a500dc" style="width: 100.0%; height: 100.0%;">Aibonito, PR, Puerto Rico</div>')[0];
+                popup_e81cc9ffe37241fb85b460305de5acf4.setContent(html_b095ceaf7b094034bb9580fdd8a500dc);
+            
+
+            marker_d642feb833a84581a2183edf8e9cc426.bindPopup(popup_e81cc9ffe37241fb85b460305de5acf4);
+
+            
+        
+</script>
