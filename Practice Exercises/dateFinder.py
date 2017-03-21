@@ -4,7 +4,6 @@ import re
 import pyperclip
 
 '''
-Hey whats up everybody
 How dates look (generally, USA):
 03/03/1991
 03-03-1991
