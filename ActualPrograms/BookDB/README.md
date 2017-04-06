@@ -1,4 +1,4 @@
-#Bookstore Database
+# Bookstore Database
 
 This is a program that stores book information of the form:
 - Title
@@ -6,10 +6,10 @@ This is a program that stores book information of the form:
 - Year
 - ISBN
 
-#Front End:
+# Front End:
 - Built via tkinter in Python 3.
 
-#Back end:
+# Back end:
 - Built utilizing SQLite via Python.
 
 User can:
