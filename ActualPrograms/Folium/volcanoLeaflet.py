@@ -5,7 +5,8 @@ import folium
 import os
 import pandas
 
-os.chdir('/Users/Christian/Documents/Python/Leaflet_Webmap/')
+# Making this relative incase this is ever cloned by someone.
+os.chdir('./Leaflet_Webmap/')
 print(os.getcwd())
 df = pandas.read_csv('Volcanoes-USA.txt')
 
