@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  margin:
+  background-color: rgb(38, 38, 38);
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  font-family: monospace sans-serif;
+}
+
+button {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: rgb(155, 155, 155);
+}
+
+div.error {
+  color: red;
+  font-size: 15px;
+  text-decoration: underline;
+}
