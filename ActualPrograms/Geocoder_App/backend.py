@@ -2,7 +2,7 @@
 # backend.py - Backend of Geocoder App that is built via flask.
 from flask import Flask, render_template, request, send_file, Response
 from werkzeug import secure_filename
-import latlon
+from latlon import handleUpload
 
 app = Flask(__name__)
 
@@ -17,12 +17,13 @@ def uploaded():
         upload = request.files['file']
         extension = upload.filename[-4:]
         if(extension == '.csv'):
-            upload.save(secure_filename('uploaded'+upload.filename))
-            latlon.readfile()
-            if(latlon.containsAddress()==True):
-                latlon.addingLatLon()
-                latlon.newCSV()
-                return render_template('index.html', btn='download.html', content=latlon.render())
+            newfilename = secure_filename('uploaded' + upload.filename)
+            upload.save(newfilename)
+            handleUpload.readfile(newfilename)
+            if(handleUpload.containsAddress()==True):
+                handleUpload.addingLatLon()
+                handleUpload.newCSV()
+                return render_template('index.html', btn='download.html', content=handleUpload.render())
             else:
                 return render_template('index.html', text='The file you uploaded does\
                 not have a column named "Address" or "address" Please choose a file\
@@ -33,8 +34,8 @@ def uploaded():
 
 @app.route('/download')
 def download():
-    return send_file('yourfile.csv', attachment_filename='yourfile.csv', as_attachment=True)
-    #return send_file('uploaded'+uploaded.filename, attachment_filename='yourfile.csv', as_attachment=True)
+    return send_file(secure_filename('uploaded'+upload.filename), attachment_filename='yourfile.csv',
+     as_attachment=True)
 
 if __name__ == '__main__':
     app.debug=True

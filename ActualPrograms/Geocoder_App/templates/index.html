@@ -2,7 +2,7 @@
 <html lang="en">
   <title>Geocoder App</title>
   <head>
-    <link href="../static/main.css" rel="stylesheet">
+    <link href="../static/main.css" type="text/css" rel="stylesheet">
   </head>
 <body>
   <div class="container">
@@ -17,13 +17,16 @@
       <br>
       <button type="submit">Submit.</button>
     </form>
+    <br>
     <div class="error">
       <br>
       {{ text | safe }}
     </div>
-    <div style="margin: 0 auto;">
+    <br>
+    <div class="download">
       {{ content | safe }}
     </div>
+    <br>
     <div class="container">
       {% include btn ignore missing %}
     </div>

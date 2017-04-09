@@ -4,50 +4,50 @@
 import pandas
 from geopy import Nominatim
 from flask import Response
-from IPython.display import HTML
-#from backend import upload
+#from IPython.display import HTML
 
-def readfile():
-    global df
-    #df = pandas.read_csv[backend.upload]
-    df = pandas.read_csv('table.csv')
+class geoCSV:
+    def readfile(self,uploadedfile):
+        global df
+        df = pandas.read_csv(uploadedfile)
+        #df = pandas.read_csv('table.csv')
 
-# If this fails, tell flask "this ain't following the rules"
-def containsAddress():
-    try:
-        df['Address']
-        return True
-    except KeyError:
-        print('No Address column in the file.')
-        return False
+    # If this fails, tell flask "this ain't following the rules"
+    def containsAddress(self):
+        try:
+            df['Address']
+            return True
+        except KeyError:
+            print('No Address column in the file.')
+            return False
 
-def addingLatLon():
-    global df
-    latitude = []
-    longitude = []
-    geolocator = Nominatim()
-    # Testing with some stuff I already have
-    addresses = []
-    for index, row in df.iterrows():
-        addresses.append(row['Address'])
-    for i in range(len(addresses)):
-        location = geolocator.geocode(addresses[i])
-        latitude.append(location.latitude)
-        longitude.append(location.longitude)
-    df['Latitude'] = latitude
-    df['Longitude'] = longitude
-    #print(df)
+    def containsaddress(self):
+        try:
+            df['address']
+            return True
+        except KeyError:
+            print('No address column was found.')
+            return False
 
-def newCSV():
-    global df
-    df.to_csv('yourfile.csv')
+    def addingLatLon(self):
+        global df
+        latitude = []
+        longitude = []
+        geolocator = Nominatim()
+        for index, row in df.iterrows():
+            location = geolocator.geocode(row['Address'])
+            latitude.append(location.latitude)
+            longitude.append(location.longitude)
+        df['Latitude'] = latitude
+        df['Longitude'] = longitude
+        #print(df)
 
-def render():
-    df = pandas.read_csv('yourfile.csv')
-    return HTML(df.to_html())
+    def newCSV(self):
+        global df
+        df.to_csv('yourfile.csv')
 
-readfile()
-containsAddress()
-addingLatLon()
-newCSV()
-render()
+    def render(self):
+        df = pandas.read_csv('yourfile.csv')
+        return df.to_html()
+
+handleUpload = geoCSV()
