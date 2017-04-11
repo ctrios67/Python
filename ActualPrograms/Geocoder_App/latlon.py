@@ -16,14 +16,16 @@ class geoCSV:
     def containsAddress(self):
         # lowerUpper is 0 if Address is a column, 1 if its address
         global lowerUpper
-        if ('Address') in df.columns:
+        # Both existing comes first in order to notify the user immediately
+        # otherwise it would erroneously process the file
+        if( (('address') in df.columns) and (('Address') in df.columns) ):
+            return False
+        elif ('Address') in df.columns:
             lowerUpper = 0
             return True
         elif ('address') in df.columns:
             lowerUpper = 1
             return True
-        elif( (('address') in df.columns) and (('Address') in df.columns) ):
-            return False
         else:
             #print('No address column was found.')
             return False

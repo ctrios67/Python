@@ -4,13 +4,16 @@ This is an application where the user can upload a CSV file that contains a colu
 and the application will geocode the addresses in that column, append the Latitude & Longitude as new columns in the
 CSV file, display the new CSV in the webpage, and allow the user to download the new file.
 
-Application View to User: 
+Application View to User:
 ![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/Geocoder_App/sample.png "Visual Example")
 
 ## Code Example
 
 Python code for website server via flask
-```@app.route('/')
+```
+app = Flask(__name__)
+
+@app.route('/')
 def index():
     return render_template('index.html')
 
@@ -20,28 +23,32 @@ def uploaded():
     if(request.method=='POST'):
         upload = request.files['file']
         extension = upload.filename[-4:]
+        # Check if it's a CSV file, otherwise tell the user.
         if(extension == '.csv'):
             newfilename = secure_filename('uploaded' + upload.filename)
             upload.save(newfilename)
             handleUpload.readfile(newfilename)
+            # Check if file contains an Address column, otherwise tell user.
             if(handleUpload.containsAddress()==True):
                 handleUpload.addingLatLon()
                 handleUpload.newCSV()
                 return render_template('index.html', btn='download.html', content=handleUpload.render())
             else:
-                return render_template('index.html', text='The file you uploaded does\
-                not have a column named "Address" or "address" Please choose a file\
-                 that abides by that so.')
+                return render_template('index.html', text='The file you uploaded either does\
+                not have a column named "Address", "address", or possibly contains both. \
+                Please upload a file containing only 1 "address" or "Address" column.')
         else:
             return render_template('index.html', text='The file you uploaded\
             is not a CSV file. Please reupload with a CSV file.')
 
 @app.route('/download')
 def download():
-    return send_file(secure_filename('uploaded'+upload.filename), attachment_filename='yourfile.csv',
+    return send_file('yourfile.csv',
+    attachment_filename='yourfile.csv',
      as_attachment=True)
 
 if __name__ == '__main__':
+    #app.debug=True
     app.run()
 ```
 
@@ -51,46 +58,60 @@ Code for handling the uploaded CSV file
 class geoCSV:
     def readfile(self,uploadedfile):
         global df
-        df = pandas.read_csv(uploadedfile)
-        #df = pandas.read_csv('table.csv')
+        df = pandas.read_csv(uploadedfile, index_col=0)
+        #df = pandas.read_csv('sample.csv')
 
     # If this fails, tell flask "this ain't following the rules"
     def containsAddress(self):
-        try:
-            df['Address']
-            return True
-        except KeyError:
-            print('No Address column in the file.')
+        # lowerUpper is 0 if Address is a column, 1 if its address
+        global lowerUpper
+        # Both existing comes first in order to notify the user immediately
+        # otherwise it would erroneously process the file
+        if( (('address') in df.columns) and (('Address') in df.columns) ):
             return False
-
-    def containsaddress(self):
-        try:
-            df['address']
+        elif ('Address') in df.columns:
+            lowerUpper = 0
             return True
-        except KeyError:
-            print('No address column was found.')
+        elif ('address') in df.columns:
+            lowerUpper = 1
+            return True
+        else:
+            #print('No address column was found.')
             return False
 
     def addingLatLon(self):
         global df
+        global lowerUpper
         latitude = []
         longitude = []
         geolocator = Nominatim()
-        for index, row in df.iterrows():
-            location = geolocator.geocode(row['Address'])
-            latitude.append(location.latitude)
-            longitude.append(location.longitude)
+        if(lowerUpper==0):
+            for index, row in df.iterrows():
+                location = geolocator.geocode(row['Address'])
+                latitude.append(location.latitude)
+                longitude.append(location.longitude)
+        else:
+            for index, row in df.iterrows():
+                location = geolocator.geocode(row['address'])
+                latitude.append(location.latitude)
+                longitude.append(location.longitude)
         df['Latitude'] = latitude
         df['Longitude'] = longitude
         #print(df)
 
+    # This generates the new file with the new columns, but this may actually
+    # not even be necessary.
     def newCSV(self):
         global df
         df.to_csv('yourfile.csv')
 
+    # This is the least painful way to generate our new CSV file additions
+    # Within the browser. This converts it into an HTML table.
     def render(self):
-        df = pandas.read_csv('yourfile.csv')
-        return df.to_html()
+        global df
+        # I am embarassed by the amount of time it took me to figure out how to
+        # pass a CSS class to the genrated HTML table....
+        return df.to_html(classes='download')
 
 handleUpload = geoCSV()
 ```
