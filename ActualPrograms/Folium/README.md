@@ -6,7 +6,7 @@ The output can be viewed in the following link:
 https://github.com/ctrios67/HTML/blob/master/Python_Outputs/Folium/VolcanoPop.html
 
 Output File Generated:
-![alt text](https://github.com/ctrios67/Python/tree/master/ActualPrograms/Folium/VolcanoPop.png "Geojson Example")
+![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/Folium/VolcanoPop.png  "Geojson Example")
 
 - Requirement:
 	- Generate a leaflet map that plots Volcano locations in the U.S.
@@ -25,7 +25,7 @@ The output can be viewed in the following link:
 https://github.com/ctrios67/HTML/blob/master/Python_Outputs/Folium/travels.html
 
 Output File Generated:
-![alt text](https://github.com/ctrios67/Python/tree/master/ActualPrograms/Folium/travels.png "My Travels Example")
+![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/Folium/travels.png "My Travels Example")
 	
 - Requirement:
 	- Generate a leaflet map that plots travel locations/residences in the U.S., Canada, & Carribbean.
