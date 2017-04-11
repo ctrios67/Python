@@ -4,6 +4,9 @@ This is an application where the user can upload a CSV file that contains a colu
 and the application will geocode the addresses in that column, append the Latitude & Longitude as new columns in the
 CSV file, display the new CSV in the webpage, and allow the user to download the new file.
 
+Application View to User: 
+![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/Geocoder_App/sample.png "Visual Example")
+
 ## Code Example
 
 Python code for website server via flask
