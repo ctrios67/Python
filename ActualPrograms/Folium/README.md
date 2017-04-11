@@ -1,7 +1,12 @@
 # volcanoLeaflet.py
 This is a Python program that generates a leaflet map of the world. This map plots the points
-of all the volcanoes located within the United States via grabbing this data from a csv file. This program also colorizes countries based on population numbers (from circa 2005 I believe) from a geojson file. The output can be viewed in the following link:
-	
+of all the volcanoes located within the United States via grabbing this data from a csv file. This program also colorizes countries based on population numbers (from circa 2005 I believe) from a geojson file. 
+
+The output can be viewed in the following link:	
+https://github.com/ctrios67/HTML/blob/master/Python_Outputs/Folium/VolcanoPop.html
+
+Output File Generated:
+![alt text](https://github.com/ctrios67/Python/tree/master/ActualPrograms/Folium/VolcanoPop.png "Geojson Example")
 
 - Requirement:
 	- Generate a leaflet map that plots Volcano locations in the U.S.
@@ -14,7 +19,13 @@ of all the volcanoes located within the United States via grabbing this data fro
 	- World Population geojson file.
 	
 # myTravels.py
-This is a Python program that generates a leaflet map with points of places I have lived in or visited in my travels. The output can be viewed in the following link:
+This is a Python program that generates a leaflet map with points of places I have lived in or visited in my travels. 
+
+The output can be viewed in the following link:
+https://github.com/ctrios67/HTML/blob/master/Python_Outputs/Folium/travels.html
+
+Output File Generated:
+![alt text](https://github.com/ctrios67/Python/tree/master/ActualPrograms/Folium/travels.png "My Travels Example")
 	
 - Requirement:
 	- Generate a leaflet map that plots travel locations/residences in the U.S., Canada, & Carribbean.
