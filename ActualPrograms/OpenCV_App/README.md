@@ -11,6 +11,9 @@ This is a motion detecting program that opens your video camera (likely your bui
 # plotting.py
 This is a program calls videoAppComplete to run, and once the capture is done, this program captures the DataFrame generated from videoAppComplete and visualizes the motion captures.
 
+Output Graph:
+![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/OpenCV_App/sample.png "Visual Example")
+
 - Requirement:
 	- Plot a time series graph of the motions captured in videoAppComplete.
 - Packages Used:
