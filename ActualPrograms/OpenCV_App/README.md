@@ -93,7 +93,7 @@ show(p)
 ```
 # Motivation
 
-For my senior project way back in College, I had explored using OpenCV as an option for autonomous motion detection. It was a nightmare to configure, and now, some years later, I figured to try and apply it with the language I'm learning now, which is Python.
+For my senior project way back in College, I had explored using OpenCV as an option for autonomous motion detection via C++. It was a nightmare to configure, and now, some years later, I figured to try and apply it with the language I'm learning now, which is Python.
 
 # Installation
 
