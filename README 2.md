@@ -1,2 +1,0 @@
-# Hiya!
-These here are the Python programs I've made that can actually qualify as "programs." I am currently in the process of actually having sensical README's so please bare with me as I finish that. Usually, the gist of the program is at the top of the code commented out.

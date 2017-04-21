@@ -3,7 +3,7 @@
 This is a motion detecting program that opens your video camera (likely your built-in one, not externals) detects motion differences, highlights them with boxes, and also captures the times there was motion in the video capture into a csv file. Then, this program captures the DataFrame generated and visualizes the motion captures as a time series graph.
 
 Output Graph:
-![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/OpenCV_App/sample.png "Visual Example")
+![alt text](https://github.com/ctrios67/Python/blob/master/OpenCV_App/sample.png "Visual Example")
 
 # Code Example
 

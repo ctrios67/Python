@@ -5,7 +5,7 @@ and the application will geocode the addresses in that column, append the Latitu
 CSV file, display the new CSV in the webpage, and allow the user to download the new file.
 
 Application View to User:
-![alt text](https://github.com/ctrios67/Python/blob/master/ActualPrograms/Geocoder_App/sample.png "Visual Example")
+![alt text](https://github.com/ctrios67/Python/tree/master/Geocoder_App/sample.png "Visual Example")
 
 ## Code Example
 
