@@ -12,15 +12,21 @@ import glob2
 # TODO: Fix this! This is initial approach is very stupid but I just want to make sure I remember how this works, it's been awhile.
 etl_metadata_dir = os.getcwd().replace("ETL_JOBS", "ETL_METADATA")
 
-# Lazily get the SQL file so we can read from it
-sql_file = ""
+# Lazily get the SQL file(s) so we can read from it, and store how many files there are
+sql_files = []
 for i in glob2.glob(etl_metadata_dir + "*.sql"):
-    sql_file = i
+    sql_files.append(i)
 
-# Open the file we got, and bring the SQL inside as one long string.
-sql_to_execute = ""
-with open(sql_file, "r") as sql_getter:
-    sql_to_execute = sql_getter.readlines()
+num_of_sql_files = len(sql_files)
+
+# Open the files we got, and bring the SQL inside as one long string.
+sql_to_execute_1 = ""
+with open(sql_file[0], "r") as sql_getter:
+    sql_to_execute_1 = sql_getter.readlines()
+
+sql_to_execute_2 = ""
+with open(sql_file[num_of_sql_files - 1], "r") as sql_getter:
+    sql_to_execute_2 = sql_getter.readlines()
 
 # Establish a connection to the database by creating a cursor object
 # The PostgreSQL server must be accessed through the PostgreSQL APP or Terminal Shell
@@ -40,7 +46,11 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # A sample query of all data from the "vendors" table in the "suppliers" database
-cur.execute(sql_to_execute)
+cur.execute(sql_to_execute_1)
+query_results = cur.fetchall()
+print(query_results)
+
+cur.execute(sql_to_execute_2)
 query_results = cur.fetchall()
 print(query_results)
 
