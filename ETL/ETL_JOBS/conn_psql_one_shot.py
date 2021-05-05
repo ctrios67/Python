@@ -17,7 +17,10 @@ sql_file = ""
 for i in glob2.glob(etl_metadata_dir + "*.sql"):
     sql_file = i
 
+# Open the file we got, and bring the SQL inside as one long string.
 sql_to_execute = ""
+with open(sql_file, "R") as sql_getter:
+    sql_to_execute = sql_getter.readlines()
 
 # Establish a connection to the database by creating a cursor object
 # The PostgreSQL server must be accessed through the PostgreSQL APP or Terminal Shell
@@ -37,7 +40,7 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # A sample query of all data from the "vendors" table in the "suppliers" database
-cur.execute("""SELECT * FROM vendors""")  # change this my dude
+cur.execute(sql_to_execute)
 query_results = cur.fetchall()
 print(query_results)
 
