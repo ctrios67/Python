@@ -15,7 +15,7 @@ etl_metadata_dir = os.getcwd().replace("ETL_JOBS", "ETL_METADATA")
 # Lazily get the SQL file so we can read from it
 sql_file = ""
 for i in glob2.glob(etl_metadata_dir + "*.sql"):
-    sql_file = i.replace(os.join(etl_metadata_dir, os.sep()), "")
+    sql_file = i
 
 sql_to_execute = ""
 
